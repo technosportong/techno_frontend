@@ -64,7 +64,7 @@ const About = () => {
               Santhapet, Ongole, Andhra Pradesh 523001
             </p>
             <p className="text-gray-400 mt-2">
-              Near Addanki Bus Stand
+              Near Nellore Bus Stand
             </p>
           </motion.div>
 
