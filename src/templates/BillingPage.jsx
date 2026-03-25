@@ -34,7 +34,9 @@ const BillingPage = () => {
 
   const fetchBillNumber = async () => {
     try {
-      const res = await fetch("https://techno-backend-idyr.onrender.com/bill/next-bill-number");
+      const res = await fetch(
+        "https://techno-backend-idyr.onrender.com/bill/next-bill-number"
+      );
       const data = await res.json();
       if (res.ok) setBillNumber(data.billNumber);
     } catch (err) {
@@ -83,11 +85,14 @@ const BillingPage = () => {
       payment: { cash: cashAmount, upi: upiAmount },
     };
 
-    const res = await fetch("https://techno-backend-idyr.onrender.com/bill/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const res = await fetch(
+      "https://techno-backend-idyr.onrender.com/bill/add",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    );
 
     const data = await res.json();
 
@@ -100,6 +105,17 @@ const BillingPage = () => {
       setUpiAmount(0);
       fetchBillNumber();
     }
+  };
+
+  // ✅ CLEAR BILL FUNCTION
+  const clearBill = () => {
+    if (!window.confirm("Are you sure you want to clear the bill?")) return;
+
+    localStorage.removeItem("billingItems");
+    setBillingItems([]);
+    setCashAmount(0);
+    setUpiAmount(0);
+    setDiscountPercent(0);
   };
 
   return (
@@ -209,19 +225,28 @@ const BillingPage = () => {
         </div>
 
         {/* BUTTONS */}
-        <div className="flex gap-2 mt-3">
-          <button
-            onClick={() => window.print()}
-            className="flex-1 bg-black text-white py-1 rounded"
-          >
-            Print
-          </button>
+        <div className="flex flex-col gap-2 mt-3">
+          <div className="flex gap-2">
+            <button
+              onClick={() => window.print()}
+              className="flex-1 bg-black text-white py-1 rounded"
+            >
+              Print
+            </button>
+
+            <button
+              onClick={saveBill}
+              className="flex-1 bg-green-600 text-white py-1 rounded"
+            >
+              Save
+            </button>
+          </div>
 
           <button
-            onClick={saveBill}
-            className="flex-1 bg-green-600 text-white py-1 rounded"
+            onClick={clearBill}
+            className="bg-red-600 text-white py-1 rounded"
           >
-            Save
+            Clear Bill
           </button>
         </div>
       </div>
