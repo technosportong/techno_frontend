@@ -23,7 +23,6 @@ const fadeUp = {
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0B1F3A] via-[#0F2A4A] to-black text-white px-6 py-16">
-
       <div className="max-w-6xl mx-auto">
 
         {/* 🔥 HEADER */}
@@ -54,7 +53,6 @@ const About = () => {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
             className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl border border-white/10 shadow-xl hover:scale-105 transition"
           >
             <MapPin className="text-orange-400 mb-3" size={32} />
@@ -73,17 +71,12 @@ const About = () => {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
             className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl border border-white/10 shadow-xl hover:scale-105 transition"
           >
             <Clock className="text-orange-400 mb-3" size={32} />
             <h3 className="text-xl font-bold mb-2">Store Timings</h3>
-            <p className="text-gray-300">
-              Open All Days
-            </p>
-            <p className="text-gray-400">
-              10:00 AM – 10:00 PM
-            </p>
+            <p className="text-gray-300">Open All Days</p>
+            <p className="text-gray-400">10:00 AM – 10:00 PM</p>
           </motion.div>
 
           {/* 📞 CONTACT */}
@@ -91,16 +84,15 @@ const About = () => {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
             className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl border border-white/10 shadow-xl hover:scale-105 transition"
           >
             <Phone className="text-orange-400 mb-3" size={32} />
             <h3 className="text-xl font-bold mb-2">Contact</h3>
             <a
-              href="tel:9876543210"
+              href="tel:9392208806"
               className="text-blue-400 font-semibold"
             >
-              9876543210
+              9392208806
             </a>
           </motion.div>
 
@@ -109,7 +101,6 @@ const About = () => {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
             className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl border border-white/10 shadow-xl hover:scale-105 transition"
           >
             <Users className="text-orange-400 mb-3" size={32} />
@@ -118,7 +109,6 @@ const About = () => {
               Join our WhatsApp group for latest offers & updates.
             </p>
           </motion.div>
-
         </div>
 
         {/* 🔥 ACTION BUTTONS */}
@@ -126,15 +116,14 @@ const About = () => {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
           className="mt-16 grid md:grid-cols-3 gap-6"
         >
 
           {/* WhatsApp Chat */}
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/9392208806"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 px-6 py-4 rounded-2xl shadow-xl transition hover:scale-105"
           >
             <MessageCircle /> WhatsApp Chat
@@ -144,7 +133,7 @@ const About = () => {
           <a
             href="https://www.instagram.com/technosport_ongole/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-orange-500 px-6 py-4 rounded-2xl shadow-xl hover:scale-105 transition"
           >
             <Instagram /> Instagram
@@ -154,7 +143,7 @@ const About = () => {
           <a
             href="https://www.google.com/maps/dir/?api=1&destination=Technosport+Ongole"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-4 rounded-2xl shadow-xl transition hover:scale-105"
           >
             <Navigation /> Directions
@@ -167,13 +156,12 @@ const About = () => {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
           className="mt-10 text-center"
         >
           <a
-            href="https://share.google/bxcYu3XBmlQRblI2M"
+            href="https://chat.whatsapp.com/DW86T7JybmfH36vUKxKcGj?mode=gi_t"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-block bg-green-600 hover:bg-green-700 px-8 py-4 rounded-2xl shadow-xl text-lg transition hover:scale-105"
           >
             Join WhatsApp Group
