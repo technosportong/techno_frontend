@@ -10,9 +10,8 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-[#0B1F3A] text-gray-300 pt-12 pb-6">
-
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
-
+        
         {/* 🔥 BRAND */}
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">
@@ -55,11 +54,12 @@ const Footer = () => {
           </h3>
 
           <div className="space-y-3 text-sm">
-
             <p className="flex items-start gap-2">
-              <MapPin size={18} className="text-orange-400 mt-1" />
-              37-1-17, Trunk Rd, Santhapet, Ongole  
-              <br /> Near Addanki Bus Stand
+              <MapPin size={18} className="text-orange-400 mt-1 flex-shrink-0" />
+              <span>
+                37-1-17, Trunk Rd, Santhapet, Ongole <br />
+                Near Nellore Bus Stand
+              </span>
             </p>
 
             <p className="flex items-center gap-2">
@@ -69,11 +69,14 @@ const Footer = () => {
 
             <p className="flex items-center gap-2">
               <Phone size={18} className="text-orange-400" />
-              <a href="tel:9876543210" className="hover:text-white">
-                9876543210
+              <a
+                href="tel:9392208806"
+                className="hover:text-white"
+                aria-label="Call Technosport Ongole"
+              >
+                9392208806
               </a>
             </p>
-
           </div>
         </div>
 
@@ -84,44 +87,43 @@ const Footer = () => {
           </h3>
 
           <div className="flex flex-col gap-3">
-
             <a
               href="https://www.instagram.com/technosport_ongole/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-orange-400 transition"
+              aria-label="Instagram"
             >
               <Instagram size={18} /> Instagram
             </a>
 
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/9392208806"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-orange-400 transition"
+              aria-label="WhatsApp Chat"
             >
               <MessageCircle size={18} /> WhatsApp Chat
             </a>
 
             <a
-              href="https://share.google/bxcYu3XBmlQRblI2M"
+              href="https://chat.whatsapp.com/DW86T7JybmfH36vUKxKcGj?mode=gi_t"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-orange-400 transition"
+              aria-label="WhatsApp Group"
             >
               <MessageCircle size={18} /> WhatsApp Group
             </a>
-
           </div>
         </div>
-
       </div>
 
       {/* 🔥 BOTTOM BAR */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
         © {new Date().getFullYear()} Technosport Ongole. All rights reserved.
       </div>
-
     </footer>
   );
 };
